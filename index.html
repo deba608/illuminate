@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illuminate Workshop - Certificate Download</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo-section">
+                <div class="logo-glow"></div>
+                <h1 class="main-heading">
+                    <span class="gradient-text">Illuminate Workshop</span>
+                    <span class="heading-subtitle">Certificate Download</span>
+                </h1>
+            </div>
+            <p class="workshop-info">E-Cell SUIIT</p>
+            <p class="tagline">"Be A Founder, Not A Finder"</p>
+        </header>
+
+        <main class="main-content">
+            <div class="glass-card search-card">
+                <div class="card-glow"></div>
+                <h2 class="card-title">Get Your Certificate</h2>
+                <p class="card-description">Enter your full name as registered during the workshop</p>
+                
+                <div class="search-form">
+                    <div class="input-group">
+                        <label for="nameInput" class="input-label">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="nameInput" 
+                            class="glass-input" 
+                            placeholder="e.g., Abhash Dash"
+                            autocomplete="off"
+                            title="Enter your full name"
+                        >
+                        <div id="suggestions" class="suggestions-container"></div>
+                    <button id="searchBtn" class="glass-button primary-button">
+                        <span class="button-text">Search Certificate</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultSection" class="result-section hidden">
+                <div id="successCard" class="glass-card result-card success-card hidden">
+                    <div class="card-glow success-glow"></div>
+                    <div class="success-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="result-title">Certificate Found!</h3>
+                    <p class="result-message">Congratulations, <span id="participantName" class="highlight-name"></span>!</p>
+                    <p class="result-description">Your certificate is ready to download.</p>
+                    <button id="downloadBtn" class="glass-button download-button">
+                        <span class="button-text">Download Certificate</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+
+                <div id="errorCard" class="glass-card result-card error-card hidden">
+                    <div class="card-glow error-glow"></div>
+                    <div class="error-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <h3 class="result-title">Certificate Not Found</h3>
+                    <p class="result-message">We couldn't find a certificate with that name.</p>
+                    <p class="result-description">Please check your spelling and try again. Make sure to enter your full name as registered.</p>
+                    <button id="tryAgainBtn" class="glass-button secondary-button">
+                        <span class="button-text">Try Again</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="glass-card footer-card">
+                <p class="footer-text">Organized by <span class="gradient-text">"Team E-Cell SUIIT"</span></p>
+                <p class="footer-subtext">Illuminate Workshop 2025 &middot; Empowering Future Entrepreneurs</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
